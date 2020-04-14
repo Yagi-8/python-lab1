@@ -17,7 +17,7 @@ while i<len(num):
         print('возрастает: ',bool)
     else:
         bool=False
-        print('убывает: ',False)
+        print('убывает: ',bool)
     i+=1
   
     
