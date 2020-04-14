@@ -9,9 +9,13 @@
 """
 
 import random,time,datetime
+from itertools import combinations
+#from itertools import product
 teams = ['Россия','Испания','Италия','Франция', 'Англия', 'Германия', 'Швеция', 'Дания', 
          'Греция', 'Бельгия', 'Китай', 'Бразилия', 'Аргентина', 'Урлай', 'Турция','Португалия']
 random.shuffle(teams)
+a=[]
+#print(teams)
 print('Команда 1: ')
 for i in range(0,4):
     print(teams[i])
@@ -30,12 +34,18 @@ for i in range(12,16):
 print()
 random.shuffle(teams)
 razn=datetime.timedelta(days=14)
-dataN=datetime.datetime(2018,9,14,22,45)
+dataN=datetime.datetime(2020,9,14,22,45)
 match=''
 i=0
 while i<16:
     match+='Игра: '+teams[i]+' против '+teams[i+1]
+    
+    #data=list(product(teams[i],teams[i+1]))
     print(match,time.strftime("%d/%m/%Y %H:%M"))
+    
     match=''
     time=dataN+datetime.timedelta(days=7*i)
+    
     i+=2
+data=list(combinations(teams,2))
+print('\nвсевозможные комбинации команд: ',data)

@@ -5,14 +5,19 @@
 последовательность, иначе – «False».
 """
 
-#num[]=input('Введите последовательность')
-num=[1,2,3,4,5]
-a=0
-for item in num:
-    if item<item+1:
-        print('True')
+
+num=[9,7,6,5,10]
+
+i=0
+while i<len(num):
+    if i==(len(num)-1):# не с чем сравнивать последний элемент
+        break
+    if num[i]<num[i+1]:
+        bool=True
+        print('возрастает: ',bool)
     else:
-        print('False')
-        print(item)
-        #print('test: ',a)
+        bool=False
+        print('убывает: ',False)
+    i+=1
+  
     

@@ -6,31 +6,33 @@
 остальные.
 """
 
-
-string=input('введите текст ')
-print('вся строка: ',string)
-str7=string[0:7]
-print('str7: ',str7)
-str4=string[7:12]
-print('str4: ',str4)
-str5=string[12:17]
-print('str5: ',str5)
-str6=string[17:23]
-print('str6: ',str6)
-str77=string[23:31]
-print('str77: ',str77)
-str_all=string[31:len(string)]
-print('остаток: ',str_all)
-print(str7,'+',str4,'+',str5,'+',str6,'+',str77,'+',str_all)
-import random
-
-print('ИЛИ ')
-str7=string[0:7]
-print('str7: ',str7)
-n=random.randint(4,7)
-b=int(n)
-strr=string[7:7+b]
-print('число: ',b,'слово: ',strr)
-str_all=string[7+b:len(string)]
-print('остаток: ',str_all)
-print(str7,'+',strr,'+',str_all)
+# ехала саша по шоссе и употребляла хлебобулочные изделия
+text=input('Введите текст: ')
+n=len(text.split())
+print(n)
+a=[]
+i=0
+while i<len(text.split()):
+    a.append(text.split(' ')[i])
+    #print('результат',a)
+    i+=1
+print(a)
+#print('длина',len(a[0]))
+i=0
+j=0
+n=0
+while i<len(a):
+    if len(a[i])>=7:
+        print('больше 7 символов',a[i])
+        #n+=1
+    i+=1
+i=0
+while i<len(a):
+    if len(a[i])>=4 and len(a[i])<7:
+        print('от 4 до 7 символов',a[i])
+    i+=1
+i=0
+while i<len(a):
+    if len(a[i])<4 :
+        print('меньше 4 символов',a[i])
+    i+=1

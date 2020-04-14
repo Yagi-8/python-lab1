@@ -8,37 +8,48 @@
 адресами. Используйте генераторы списков."""
 
 
+def fun():
+    i=1
+    
+    #list1=[]
+    for item in list:
+        print('\nАдреса: ',item)
+        str=item
+        #print('Первые буквы: ',str[0:3])
+        if str[0:3]=='www':
+            str1='http://'+str
+            print('\nДобавление фразы: ',str1)
+            #list[i]=str1
+        
+        else:
+            str1=str
+            print('\nНе добавляли www: ',str1)
+            #list[i]=str1
+        
+        #print('Окончание адреса: ',str[-3:len(str)])
+        if str[-3:len(str)]=='com':
+            list1.insert(i,str1)
+            print('\nНеизменный адрес: ',str1)
+            
+        
+            #print('\nНеизменный адрес снова: ',str1)
+        else:
+            str2=str1+'.com'
+            list1.insert(i,str2)
+            print('\nИзменный адрес: ',str2)
+           
+        
+            #print('\nНеизменный адрес снова: ',str1)
+        i+=1
+        
+    #print('\n\nОбновленный список: ',list1)
+    
+
+
+
 list=['www.pythonworld.ru','www.youtube.com','music.yandex.ru']
 print('Список: ',list)
-i=1
 list1=[]
-for item in list:
-    print('\nАдреса: ',item)
-    str=item
-    #print('Первые буквы: ',str[0:3])
-    if str[0:3]=='www':
-        str1='http://'+str
-        print('\nДобавление фразы: ',str1)
-        #list[i]=str1
-        
-    else:
-        str1=str
-        print('\nНе добавляли www: ',str1)
-        #list[i]=str1
-        
-    #print('Окончание адреса: ',str[-3:len(str)])
-    if str[-3:len(str)]=='com':
-        list1.insert(i,str1)
-        print('\nНеизменный адрес: ',str1)
-        
-        
-        #print('\nНеизменный адрес снова: ',str1)
-    else:
-        str2=str1+'.com'
-        list1.insert(i,str2)
-        print('\nИзменный адрес: ',str2)
-        
-        
-        #print('\nНеизменный адрес снова: ',str1)
-    i+=1
-print('Обновленный список: ',list1)
+fun()
+list2=[i for i in list1]#генератор списка
+print('\n\nГЕНЕРАТОР LIST2',list2)
